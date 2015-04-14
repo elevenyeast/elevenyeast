@@ -37,8 +37,8 @@
       <h2>User's friends that are visible to this app</h2>
       <div id="visiblePeople"></div>
 
-      <h2>Authentication Logs</h2>
-      <pre id="authResult"></pre>
+      <!-- <h2>Authentication Logs</h2> -->
+      <!-- <pre id="authResult"></pre> -->
     </div>
     
     <div id="loaderror">
@@ -72,11 +72,11 @@
            *   other authentication information.
            */
           onSignInCallback: function(authResult) {
-            $('#authResult').html('Auth Result:<br/>');
-            for (var field in authResult) {
-              $('#authResult').append(' ' + field + ': ' +
-                  authResult[field] + '<br/>');
-            }
+            // $('#authResult').html('Auth Result:<br/>');
+            // for (var field in authResult) {
+            //   $('#authResult').append(' ' + field + ': ' +
+            //       authResult[field] + '<br/>');
+            // }
             if (authResult.isSignedIn.get()) {
               $('#authOps').show('slow');
               $('#gConnect').hide();
