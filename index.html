@@ -28,8 +28,8 @@
       <h2 class="project-tagline">I am a student.</h2>
       <a href="https://github.com/elevenyeast" class="btn">GitHub</a>
       <a href="https://twitter.com/elevenyeast" class="btn">Twitter</a>
-      <div id="gConnect">
-        <div class="btn" id="customBtn">Login</div>
+      <div id="gConnects">
+        <div class="btn" id="customBtn">Others</div>
       </div>
       <!-- <div id="gSignInWrapper"> -->
         <!-- <span class="label">Sign in with:</span> -->
@@ -107,7 +107,7 @@
             // }
             if (authResult.isSignedIn.get()) {
               $('#authOps').show('slow');
-              $('#gConnect').hide();
+              $('#gConnects').hide();
               helper.profile();
               helper.people();
             } else if (authResult['error'] ||
@@ -117,7 +117,7 @@
               console.log('There was an error: ' + authResult['error']);
               // $('#authResult').append('Logged out');
               $('#authOps').hide('slow');
-              $('#gConnect').show();
+              $('#gConnects').show();
             }
             console.log('authResult', authResult);
           },
