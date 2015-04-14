@@ -29,7 +29,7 @@
       <a href="https://github.com/elevenyeast" class="btn">GitHub</a>
       <a href="https://twitter.com/elevenyeast" class="btn">Twitter</a>
       <div id="gConnect">
-        <div class="btn" id="signin-button">Login</div>
+        <div class="btn" id="signin-btn">Login</div>
       </div>
       <!-- <div id="gSignInWrapper"> -->
         <!-- <span class="label">Sign in with:</span> -->
@@ -220,7 +220,7 @@
       function startApp() {
         gapi.load('auth2', function() {
           gapi.client.load('plus','v1').then(function() {
-            gapi.signin2.render('signin-button', {
+            gapi.signin2.render('signin-btn', {
                 scope: 'https://www.googleapis.com/auth/plus.login',
                 fetch_basic_profile: false });
             gapi.auth2.init({fetch_basic_profile: false,
