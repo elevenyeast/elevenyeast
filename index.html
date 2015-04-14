@@ -190,13 +190,13 @@
       $(document).ready(function() {
         $('#disconnect').click(helper.disconnect);
         $('#loaderror').hide();
-        if ($('meta')[0].content == '1029163976937-b1b5ojr74qa23juat404jhmu8ha4v53k.apps.googleusercontent.com') {
-          alert('This sample requires your OAuth credentials (client ID) ' +
-              'from the Google APIs console:\n' +
-              '    https://code.google.com/apis/console/#:access\n\n' +
-              'Find and replace YOUR_CLIENT_ID with your client ID.'
-          );
-        }
+        // if ($('meta')[0].content == '1029163976937-b1b5ojr74qa23juat404jhmu8ha4v53k.apps.googleusercontent.com') {
+        //   alert('This sample requires your OAuth credentials (client ID) ' +
+        //       'from the Google APIs console:\n' +
+        //       '    https://code.google.com/apis/console/#:access\n\n' +
+        //       'Find and replace YOUR_CLIENT_ID with your client ID.'
+        //   );
+        // }
       });
 
       /**
@@ -222,6 +222,8 @@
           gapi.client.load('plus','v1').then(function() {
             gapi.signin2.render('customBtn', {
                 scope: 'https://www.googleapis.com/auth/plus.login',
+                cookiepolicy: 'single_host_origin',
+                requestvisibleactions: 'http://schemas.google.com/AddActivity',
                 fetch_basic_profile: false });
             gapi.auth2.init({fetch_basic_profile: false,
                 scope:'https://www.googleapis.com/auth/plus.login'}).then(
@@ -234,6 +236,8 @@
           });
         });
       }
+
+    
 
       // Google Plus Plugin
       // (function() {
