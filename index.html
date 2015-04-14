@@ -37,7 +37,7 @@
       <h2>User's friends that are visible to this app</h2>
       <div id="visiblePeople"></div>
 
-      <!-- <h2>Authentication Logs</h2> -->
+      <h2>Authentication Logs</h2>
       <!-- <pre id="authResult"></pre> -->
     </div>
     
@@ -87,7 +87,7 @@
               // There was an error, which means the user is not signed in.
               // As an example, you can handle by writing to the console:
               console.log('There was an error: ' + authResult['error']);
-              $('#authResult').append('Logged out');
+              // $('#authResult').append('Logged out');
               $('#authOps').hide('slow');
               $('#gConnect').show();
             }
