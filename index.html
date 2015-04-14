@@ -80,7 +80,7 @@
             if (authResult.isSignedIn.get()) {
               $('#authOps').show('slow');
               $('#gConnect').hide();
-              // helper.profile();
+              helper.profile();
               helper.people();
             } else if (authResult['error'] ||
                 authResult.currentUser.get().getAuthResponse() == null) {
