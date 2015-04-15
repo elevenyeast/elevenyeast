@@ -62,8 +62,8 @@
       <h2>User's profile information</h2>
       <div id="profile"></div>
 
-      <h2>User's friends that are visible to this app</h2>
-      <div id="visiblePeople"></div>
+      <!-- <h2>User's friends that are visible to this app</h2>
+      <div id="visiblePeople"></div> -->
 
       <!-- <h2>Authentication Logs</h2> -->
       <pre id="authResult"></pre>
@@ -109,7 +109,7 @@
               $('#authOps').show('slow');
               $('#gConnects').hide();
               helper.profile();
-              helper.people();
+              // helper.people();
             } else if (authResult['error'] ||
                 authResult.currentUser.get().getAuthResponse() == null) {
               // There was an error, which means the user is not signed in.
