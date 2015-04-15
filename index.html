@@ -138,7 +138,7 @@
             console.log("getEmail");
             gapi.client.load('oauth2', 'v2', function() {
               var request = gapi.client.oauth2.userinfo.get();
-              request.execute(this.getEmailCallback);
+              request.execute(helper.getEmailCallback);
             });
           },
 
@@ -153,7 +153,7 @@
             }
 
             el.innerHTML = email;
-            this.toggleElement('email');
+            helper.toggleElement('email');
 
           },
 
