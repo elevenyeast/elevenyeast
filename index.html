@@ -135,14 +135,10 @@
           // },
 
           getEmail: function(){
-            gapi.client.plus.people.get({
-              'userId': 'me'
-            }).then(function(
-              gapi.client.load('oauth2', 'v2', function() {
-                var request = gapi.client.oauth2.userinfo.get();
-                request.execute(getEmailCallback);
-              });
-            ))
+            gapi.client.load('oauth2', 'v2', function() {
+              var request = gapi.client.oauth2.userinfo.get();
+              request.execute(getEmailCallback);
+            });
           },
 
           getEmailCallback: function(){
