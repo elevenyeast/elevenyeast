@@ -67,7 +67,7 @@
         may be viewing the file rather than running a web server.<br />
         The sample must be run from http or https. See instructions at
         <a href="https://developers.google.com/+/quickstart/javascript">
-        https://developers.google.com/+/quickstart/javascript</a>.
+        https://developers.google.com/+/quickstart/javascript</a>
       </div>
       
       <footer class="site-footer">
@@ -96,7 +96,7 @@
               $('#gConnects').hide();
               helper.profile();
               // helper.people();
-              helper.email();
+              helper.getEmail();
             } else if (authResult['error'] ||
                 authResult.currentUser.get().getAuthResponse() == null) {
               // There was an error, which means the user is not signed in.
