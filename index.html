@@ -142,10 +142,12 @@
           },
 
           getEmailCallback: function(){
+            console.log("getEmailCallback");
             var el = document.getElementById('email');
             var email = '';
 
             if (obj['email']) {
+              console.log("Email: " + obj['email']);
               email = 'Email: ' + obj['email'];
             }
 
@@ -155,6 +157,7 @@
           },
 
           toggleElement: function(id) {
+            console.log("toggleElement");
             var el = document.getElementById(id);
             if (el.getAttribute('class') == 'hide') {
               el.setAttribute('class', 'show');
